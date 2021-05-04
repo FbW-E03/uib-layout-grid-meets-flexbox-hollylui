@@ -1,0 +1,117 @@
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  padding: 10px 10px;
+  width: 100%;
+  height: 600px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 2fr repeat(2, 1.5fr);
+  grid-template-rows: 2fr 4fr 3fr 2fr;
+  grid-template-areas:
+    "header header header header"
+    "main main main aside-one"
+    "aside-two section section aside-one"
+    "footer footer footer footer";
+}
+
+h1,
+.footer h2,
+.main,
+.aside-one,
+.aside-two,
+.section {
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.footer h2,
+h1 {
+  align-self: center;
+}
+
+nav,
+.header,
+.main,
+.aside-one,
+.aside-two,
+.section,
+.footer {
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+/* header -------------------- */
+
+.header {
+  grid-area: header;
+  font-size: 1.6rem;
+  width: 100%;
+  background-color: lightyellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav {
+  width: 50%;
+  background-color: #e4d2c4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* main ------------------------------ */
+.main {
+  grid-area: main;
+  background-color: #fce898;
+}
+
+/* aside 1 & aside 2----------------------- */
+
+.aside-one {
+  grid-area: aside-one;
+}
+
+.aside-two {
+  grid-area: aside-two;
+}
+
+.aside-one,
+.aside-two {
+  background-color: #67ff8a;
+}
+
+/* section ----------------------- */
+
+.section {
+  grid-area: section;
+  background-color: #ff00ff;
+}
+
+/* footer ------------------------ */
+
+.footer {
+  grid-area: footer;
+  background-color: #e7cfde;
+  display: flex;
+}
